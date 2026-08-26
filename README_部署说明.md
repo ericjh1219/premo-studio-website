@@ -1,13 +1,13 @@
 # Premo Studio 新网站 — 部署说明（不需要写代码）
 
-这个资料夹里的文件就是完整的网站（首页 + JB/KL 护照照片 + JB 形象照 + 毕业照 + 全家福 + About 共 7 页）。你已经有 GitHub 帐号了，所以**完全不需要再另外注册 Cloudflare 或任何其他服务**——GitHub 自己就有免费的网站托管功能（叫 GitHub Pages），全程只用一个帐号，一毛钱都不用付。
+这个资料夹里的文件就是完整的网站（首页 + JB/KL 护照照片 + JB 形象照 + 毕业照 + 全家福 + About + Blog 共 8 大页，另外还有 10 篇 Blog 文章）。你已经有 GitHub 帐号了，所以**完全不需要再另外注册 Cloudflare 或任何其他服务**——GitHub 自己就有免费的网站托管功能（叫 GitHub Pages），全程只用一个帐号，一毛钱都不用付。
 
 ## 第一步：把文件放上 GitHub（约 5 分钟）
 
 1. 登入你的 GitHub 帐号，点右上角 **+** → **New repository**
 2. Repository name 填 `premo-studio-website`（或你喜欢的名字），**必须设成 Public**（GitHub Pages 免费版只支援公开的 repository），直接按 **Create repository**
 3. 建好之后，页面上会有 **uploading an existing file** 的连结，点进去
-4. 把这个资料夹里**全部的文件跟资料夹**（`index.html`、`style.css`、`passport-photo-jb.html`、`passport-photo-kl.html`、`headshot-jb.html`、`graduation-photo.html`、`graduation-photo-cost-guide.html`、`family-portrait.html`、`about.html`、`robots.txt`、`sitemap.xml`，以及整个 `assets` 资料夹——里面是你的品牌 logo、获奖图片、客户 logo）直接拖拉进网页上传区。GitHub 会自动保留资料夹结构，不用担心。
+4. 把这个资料夹里**全部的文件跟资料夹**（所有 `.html` 文件、`style.css`、`robots.txt`、`sitemap.xml`，以及整个 `assets` 资料夹——里面是你的品牌 logo、获奖图片、客户 logo、门店照片、客户成果照片）直接拖拉进网页上传区。GitHub 会自动保留资料夹结构，不用担心。
 5. 拉到最下面，按绿色的 **Commit changes**
 
 ## 第二步：打开 GitHub Pages（免费，1 分钟，不用再注册任何东西）
@@ -31,13 +31,36 @@
 
 ## 目前所有页面
 
-- 首页（index.html）
-- KL 护照照片（passport-photo-kl.html）
+**主要页面**
+- 首页（index.html）— 含获奖记录、Headshot Portrait 主打
+- KL 护照照片（passport-photo-kl.html）— 含真实客户评价与真实拍摄成果对比照
 - JB 护照照片（passport-photo-jb.html）
 - JB 形象照（headshot-jb.html）
 - 毕业照 KL+JB 合并页（graduation-photo.html）
-- 毕业照价格指南文章（graduation-photo-cost-guide.html）
 - 全家福 KL+JB 合并页（family-portrait.html）
-- 关于我们 / 门店资讯，含奖项与客户 logo（about.html）
+- 关于我们 / 门店资讯，含奖项、曾服务客户 logo 墙、KL/JB 门店实景照（about.html）
+- Blog 文章总览页（blog.html）
 
-**建议**：这 7 页都做完了，接下来可以先把网站完整上线到 GitHub Pages 的临时网址测试一轮，确认每一页都正常，再考虑把 premostudio.my 域名指过来（见第三步）。
+**Blog 文章（毕业照小贴士 5 篇）**
+- 毕业照价格指南（graduation-photo-cost-guide.html）
+- 影棚 vs 户外拍摄（graduation-studio-vs-outdoor.html）
+- 为什么毕业照重要（why-graduation-photos-matter.html）
+- 学校 vs 专业影棚（graduation-studio-vs-school.html）
+- 毕业照穿搭指南（graduation-outfit-guide.html）
+
+**Blog 文章（形象照小贴士 5 篇）**
+- 形象照价格指南（headshot-cost-guide.html）
+- RM49 vs RM299 形象照（headshot-rm49-vs-rm299.html）
+- 男生形象照需要化妆吗（headshot-makeup-for-men.html）
+- 形象照拍摄前准备清单（headshot-preparation-checklist.html）
+- 谁需要专业形象照（who-needs-a-headshot.html）
+
+## assets 资料夹说明
+
+- `logo-mark.png` / `favicon.png` — 品牌 logo 与网站图标（取自你提供的真实 logo）
+- `awards-strip.png` — 真实获奖记录（Consumer Choice Award、WPPI Silver Award 2015 等）
+- `clients-grid.png` — 曾服务客户 logo 墙（约 20 个真实客户）
+- `store-kl.jpg` / `store-jb.jpg` — KL / JB 门店实景照
+- `results-male.jpg` / `results-female.jpg` / `results-child.jpg` — 真实客户拍摄成果对比照（用于 KL 护照照片页）
+
+**建议**：现在所有主要页面与 Blog 文章都已经完成，接下来可以先把网站完整上线到 GitHub Pages 的临时网址测试一轮，确认每一页都正常，再考虑把 premostudio.my 域名指过来（见第三步）。
