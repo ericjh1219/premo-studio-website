@@ -50,7 +50,7 @@
 
 **Blog 文章（形象照小贴士 5 篇）**
 - 形象照价格指南（headshot-cost-guide.html）
-- RM49 vs RM299 形象照（headshot-rm49-vs-rm299.html）
+- RM99 vs RM299 形象照（headshot-99-vs-299.html）
 - 男生形象照需要化妆吗（headshot-makeup-for-men.html）
 - 形象照拍摄前准备清单（headshot-preparation-checklist.html）
 - 谁需要专业形象照（who-needs-a-headshot.html）
@@ -60,7 +60,20 @@
 - `logo-mark.png` / `favicon.png` — 品牌 logo 与网站图标（取自你提供的真实 logo）
 - `awards-strip.png` — 真实获奖记录（Consumer Choice Award、WPPI Silver Award 2015 等）
 - `clients-grid.png` — 曾服务客户 logo 墙（约 20 个真实客户）
+- `usana-logo.png` — USANA 客户真实 logo（用于 about.html 客户墙）
 - `store-kl.jpg` / `store-jb.jpg` — KL / JB 门店实景照
 - `results-male.jpg` / `results-female.jpg` / `results-child.jpg` — 真实客户拍摄成果对比照（用于 KL 护照照片页）
+- `pricing-headshot-male.jpg` / `pricing-headshot-female.jpg` / `pricing-headshot-express.png` — 真实形象照价格图（用于 headshot-jb.html 与相关 Blog 文章）
+- `pricing-passport-49.png` / `pricing-passport-59.png` — 真实护照照片价格图（用于 KL/JB 护照照片页）
+- `pricing-family-packages.png` — 真实全家福套餐价格表（用于 family-portrait.html）
+- `gown-jb.png` — JB 分店真实毕业袍款式参考照（用于 graduation-photo.html）
+
+## 这次更新的重点（真实数据）
+
+- 加入了你提供的 6 张真实价格图（Business Portrait Male/Female/Express、Passport Photo RM49/RM59、Family Portrait 套餐表），已放到对应页面，并同步更新了 headshot-cost-guide.html 与新增的 headshot-99-vs-299.html 这两篇 Blog 文章的价格内容（原本是估计值，现在改成真实价格）。
+- USANA 客户 logo 已经换成真实 logo 图片（之前是纯文字）。
+- 全家福页面加入了 2 条真实 FAQ（人数计算方式），取代了原本的推测内容。
+- 毕业照页面加入了 JB 分店真实毕业袍款式参考照，并加了全家福套餐（含免费毕业袍）的导购链接。
+- 导航栏挤在一起换行的问题已修好（style.css 已调整间距）。
 
 **建议**：现在所有主要页面与 Blog 文章都已经完成，接下来可以先把网站完整上线到 GitHub Pages 的临时网址测试一轮，确认每一页都正常，再考虑把 premostudio.my 域名指过来（见第三步）。
