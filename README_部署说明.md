@@ -1,6 +1,6 @@
 # Premo Studio 新网站 — 部署说明（不需要写代码）
 
-这个资料夹里的文件就是完整的网站（首页 + JB/KL 护照照片 + JB 形象照 + 毕业照 + 全家福 + About + Blog 共 8 大页，另外还有 10 篇 Blog 文章）。你已经有 GitHub 帐号了，所以**完全不需要再另外注册 Cloudflare 或任何其他服务**——GitHub 自己就有免费的网站托管功能（叫 GitHub Pages），全程只用一个帐号，一毛钱都不用付。
+这个资料夹里的文件就是完整的网站（首页 + 4 大服务 × KL/JB 共 8 个服务页 + About + Blog 共 11 大页，另外还有 10 篇 Blog 文章）。你已经有 GitHub 帐号了，所以**完全不需要再另外注册 Cloudflare 或任何其他服务**——GitHub 自己就有免费的网站托管功能（叫 GitHub Pages），全程只用一个帐号，一毛钱都不用付。
 
 ## 第一步：把文件放上 GitHub（约 5 分钟）
 
@@ -31,15 +31,20 @@
 
 ## 目前所有页面
 
-**主要页面**
+**主要页面**（4 大服务，每个都拆成独立的 KL / JB 页面，方便 Google／AI 清楚辨认地点）
 - 首页（index.html）— 含获奖记录、Headshot Portrait 主打
 - KL 护照照片（passport-photo-kl.html）— 含真实客户评价与真实拍摄成果对比照
 - JB 护照照片（passport-photo-jb.html）
+- KL 形象照（headshot-kl.html）
 - JB 形象照（headshot-jb.html）
-- 毕业照 KL+JB 合并页（graduation-photo.html）
-- 全家福 KL+JB 合并页（family-portrait.html）
+- KL 毕业照（graduation-photo-kl.html）
+- JB 毕业照（graduation-photo-jb.html）
+- KL 全家福（family-portrait-kl.html）
+- JB 全家福（family-portrait-jb.html）
 - 关于我们 / 门店资讯，含奖项、曾服务客户 logo 墙、KL/JB 门店实景照（about.html）
 - Blog 文章总览页（blog.html）
+
+导航栏现在是**每个服务一个下拉选单**（滑鼠移到 Passport Photo / Headshot / Graduation / Family Portrait 上会跳出 KL 吉隆坡 / JB 新山 两个选项），不会再挤成一排。
 
 **Blog 文章（毕业照小贴士 5 篇）**
 - 毕业照价格指南（graduation-photo-cost-guide.html）
@@ -65,15 +70,20 @@
 - `results-male.jpg` / `results-female.jpg` / `results-child.jpg` — 真实客户拍摄成果对比照（用于 KL 护照照片页）
 - `pricing-headshot-male.jpg` / `pricing-headshot-female.jpg` / `pricing-headshot-express.png` — 真实形象照价格图（用于 headshot-jb.html 与相关 Blog 文章）
 - `pricing-passport-49.png` / `pricing-passport-59.png` — 真实护照照片价格图（用于 KL/JB 护照照片页）
-- `pricing-family-packages.png` — 真实全家福套餐价格表（用于 family-portrait.html）
-- `gown-jb.png` — JB 分店真实毕业袍款式参考照（用于 graduation-photo.html）
+- `pricing-family-packages.png` — 真实全家福套餐价格表（用于 family-portrait-kl.html / family-portrait-jb.html）
+- `gown-jb.png` — JB 分店真实毕业袍款式参考照（用于毕业照页面）
+- `real-graduation-couple.jpg` / `real-graduation-family.jpg` — 真实客户毕业照成果（KL/JB 毕业照页共用）
+- `real-family-group.jpg` / `real-family-fun.jpg` — 真实客户全家福成果（KL/JB 全家福页共用）
+- `real-headshot-male.jpg` / `real-headshot-corporate-group.jpg` — 真实客户形象照成果（KL/JB 形象照页共用，企业团体照也用在 Blog「谁需要专业形象照」文章）
+- `blog-illus-*.jpg`（共 7 张）— **AI 生成／网络示意图**，仅用于 7 篇 Blog 文章插图，页面上都清楚标注「示意图，非实际拍摄成果」，绝不会当作真实拍摄成果展示
 
-## 这次更新的重点（真实数据）
+## 这次更新的重点
 
-- 加入了你提供的 6 张真实价格图（Business Portrait Male/Female/Express、Passport Photo RM49/RM59、Family Portrait 套餐表），已放到对应页面，并同步更新了 headshot-cost-guide.html 与新增的 headshot-99-vs-299.html 这两篇 Blog 文章的价格内容（原本是估计值，现在改成真实价格）。
-- USANA 客户 logo 已经换成真实 logo 图片（之前是纯文字）。
-- 全家福页面加入了 2 条真实 FAQ（人数计算方式），取代了原本的推测内容。
-- 毕业照页面加入了 JB 分店真实毕业袍款式参考照，并加了全家福套餐（含免费毕业袍）的导购链接。
-- 导航栏挤在一起换行的问题已修好（style.css 已调整间距）。
+- **修复导航问题**：Passport Photo、Headshot、Graduation、Family Portrait 现在每个都有独立的 KL 和 JB 页面（之前 Passport 只有 KL、Headshot 只有 JB、毕业照和全家福是 KL/JB 合并成一页），并且每个服务页都有自己的地址、营业时间、JSON-LD 结构化资料，方便 Google 与 AI（ChatGPT 等）清楚辨认这是哪个分店的页面。
+- **导航改成下拉选单**：4 个服务变成下拉选单，滑鼠移上去会显示 KL / JB 两个选项，不再像之前那样一排挤十几个连结。
+- **加入了 6 张你 Google Drive 里的真实客户照片**（毕业照 2 张、全家福 2 张、形象照 2 张），放在对应服务页的主视觉区，KL 与 JB 页面共用同一批真实照片（你确认过不需要分店分开放）。
+- **Blog 插图**：你附上的 8 张图片中，7 张确认是 AI 生成／网络示意图，已分别放到 7 篇相关 Blog 文章（影棚 vs 户外、学校 vs 专业影棚、为什么毕业照重要、穿搭指南、价格指南、形象照准备清单、男生形象照化妆）当装饰插图，并诚实标注「示意图，非实际拍摄成果」，不会误导成真实拍摄成果。第 8 张（全家福风格的米色横幅图）目前没有合适的文章可以放，先没有使用——如果你想指定放在哪里，跟我说一声。
+- **修正了一个之前的问题**：毕业照页面原本有一组套餐价格表（RM50-100 / RM150-300 / RM300-600+），但这些数字并不是你提供的真实资料，已经改成诚实的「价格请以预约时门店最新公告为准」提示，避免网站上出现没有根据的价格误导客户。
+- **JSON-LD、内部连结、图片路径、sitemap.xml 都已经重新检查过一轮**，没有失效连结或缺失图片。
 
 **建议**：现在所有主要页面与 Blog 文章都已经完成，接下来可以先把网站完整上线到 GitHub Pages 的临时网址测试一轮，确认每一页都正常，再考虑把 premostudio.my 域名指过来（见第三步）。

@@ -3,9 +3,12 @@
   <url><loc>https://www.premostudio.my/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://www.premostudio.my/passport-photo-kl.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.premostudio.my/passport-photo-jb.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.premostudio.my/family-portrait.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.premostudio.my/headshot-kl.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.premostudio.my/headshot-jb.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.premostudio.my/graduation-photo.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.premostudio.my/graduation-photo-kl.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.premostudio.my/graduation-photo-jb.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.premostudio.my/family-portrait-kl.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.premostudio.my/family-portrait-jb.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.premostudio.my/about.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://www.premostudio.my/graduation-photo-cost-guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.premostudio.my/blog.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>

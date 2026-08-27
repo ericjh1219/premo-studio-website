@@ -68,6 +68,35 @@ img { max-width: 100%; display: block; }
 }
 .nav-toggle { display: none; }
 
+/* Nav service dropdowns (KL / JB per service) */
+.nav-dropdown { position: relative; display: inline-flex; align-items: center; }
+.nav-dropdown-toggle {
+  cursor: pointer; display: inline-flex; align-items: center; gap: 5px;
+  color: var(--text-muted); white-space: nowrap;
+}
+.nav-dropdown-toggle::after {
+  content: ""; width: 0; height: 0; margin-top: 2px;
+  border-left: 4px solid transparent; border-right: 4px solid transparent;
+  border-top: 5px solid currentColor; opacity: 0.55;
+}
+.nav-dropdown-toggle.current { color: var(--text-dark); border-bottom: 2px solid var(--text-dark); padding-bottom: 4px; font-family: "Source Serif 4", serif; }
+.nav-dropdown::after { content: ""; position: absolute; top: 100%; left: 0; right: 0; height: 12px; }
+.nav-dropdown-menu {
+  position: absolute; top: calc(100% + 10px); left: 50%; transform: translateX(-50%) translateY(4px);
+  background: #fff; border: 1px solid var(--card-border); border-radius: 6px;
+  box-shadow: 0 10px 28px rgba(30,30,25,0.12); padding: 6px; min-width: 128px;
+  opacity: 0; visibility: hidden; transition: opacity .15s ease, transform .15s ease; z-index: 60;
+}
+.nav-dropdown:hover .nav-dropdown-menu, .nav-dropdown:focus-within .nav-dropdown-menu {
+  opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0);
+}
+.nav-dropdown-menu a {
+  display: block; padding: 8px 16px; border-radius: 4px; font-size: 14px;
+  white-space: nowrap; color: var(--text-muted);
+}
+.nav-dropdown-menu a:hover { background: var(--bg-section-alt); color: var(--text-dark); }
+.nav-dropdown-menu a.current-loc { color: var(--text-dark); font-weight: 600; }
+
 /* Buttons */
 .btn {
   display: inline-flex; align-items: center; justify-content: center;
@@ -178,7 +207,7 @@ footer .foot-note { margin-top: 18px; color: #8A9694; font-size: 13px; }
   .grid-4, .grid-3, .grid-2 { grid-template-columns: 1fr; }
   .hero h1 { font-size: 32px; }
   .site-nav { padding: 14px 20px; }
-  .nav-links > a:not(.nav-cta), .nav-links > span { display: none; }
+  .nav-links > a:not(.nav-cta), .nav-links > span, .nav-links > .nav-dropdown { display: none; }
   .nav-links { gap: 0; }
   section, .hero { padding-left: 20px; padding-right: 20px; }
 }
