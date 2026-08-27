@@ -163,13 +163,6 @@ section { padding: 80px 40px; }
   border-radius: 28px; display: flex; align-items: flex-end; justify-content: center;
   padding: 28px 0 0 0; overflow: hidden;
 }
-/* Full-photo variant: show the entire photo (no circular crop). Pair with an
-   inline aspect-ratio matching the image's real pixel dimensions so object-fit:cover
-   fills the box exactly, with nothing cut off. */
-.circle-photo.full-photo {
-  border-radius: 20px;
-  background: none;
-}
 
 /* Service tint cards */
 .tint-card {
