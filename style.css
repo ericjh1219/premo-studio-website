@@ -152,18 +152,6 @@ section { padding: 80px 40px; }
   font-size: 12.5px; text-align: center; line-height: 1.5;
 }
 
-/* Circular photo crops — haimati.cn-style portrait treatment */
-.circle-photo {
-  border-radius: 50%; aspect-ratio: 1/1;
-  display: flex; align-items: center; justify-content: center;
-  color: rgba(0,0,0,0.4); font-size: 12px; text-align: center; line-height: 1.5;
-  background: repeating-linear-gradient(135deg, rgba(255,255,255,0.5), rgba(255,255,255,0.5) 8px, rgba(255,255,255,0.2) 8px, rgba(255,255,255,0.2) 16px);
-}
-.circle-block {
-  border-radius: 28px; display: flex; align-items: flex-end; justify-content: center;
-  padding: 28px 0 0 0; overflow: hidden;
-}
-
 /* Service tint cards */
 .tint-card {
   border-radius: 4px; padding: 30px 24px; display: block;
