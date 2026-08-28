@@ -189,6 +189,11 @@ section { padding: 80px 40px; }
 footer { padding: 56px 40px; text-align: center; }
 footer .foot-note { margin-top: 18px; color: #8A9694; font-size: 13px; }
 
+/* Portfolio masonry — no-crop gallery, images keep natural aspect ratio */
+.portfolio-masonry { columns: 3 280px; column-gap: 18px; margin-bottom: 8px; }
+.portfolio-item { break-inside: avoid; margin-bottom: 18px; border-radius: 10px; overflow: hidden; border: 1px solid var(--card-border); background: #fff; }
+.portfolio-item img { width: 100%; height: auto; display: block; }
+
 /* Responsive */
 @media (max-width: 900px) {
   .hero-inner { display: block !important; }
@@ -197,5 +202,7 @@ footer .foot-note { margin-top: 18px; color: #8A9694; font-size: 13px; }
   .site-nav { padding: 14px 20px; }
   .nav-links > a:not(.nav-cta), .nav-links > span, .nav-links > .nav-dropdown { display: none; }
   .nav-links { gap: 0; }
+  .portfolio-masonry { columns: 2 180px; column-gap: 12px; }
+  .portfolio-item { margin-bottom: 12px; }
   section, .hero { padding-left: 20px; padding-right: 20px; }
 }

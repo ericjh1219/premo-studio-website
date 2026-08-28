@@ -111,3 +111,28 @@
 - **全站导航栏加上「FAQ」连结**（22 个页面都加了，在 Blog 和 About 中间）。
 - **sitemap.xml 加入 faq.html**。
 - 有两个小地方我做了判断，跟你确认一下：毕业照 FAQ 那题（有提供毕业袍吗）我加了一个连去「毕业袍款式一览」页面的连结，方便顾客直接查看实际款式；另外你原文里形象照那题「多久可以收到照片」下面写的备注（提到 24 小时交付 SLA）看起来是你写给我的说明而不是要放上网站的文案，所以我没有直接搬到 FAQ 上——如果 24 小时交付真的是你们形象照 Softcopy 的正式政策，可以告诉我，我直接把这句加进 FAQ 和形象照页面。
+
+## 这次更新（第四轮）
+
+- **「毕业袍款式一览」页面大幅扩充**：你补传的 7 张毕业袍实拍照片，我整理成完整版放上页面，不再裁切、也不缩成小图标——现在完整呈现以下所有学校 / 学院的真实照片：
+  - Sunway University、Curtin University、Newcastle University、University of London、Murdoch University（+ MMU、Raffles、NUS、SIM、UTM）
+  - Monash University（White／Grey／Pink／Red／Orange／Yellow／Purple／L. Blue／D. Blue 等披肩颜色，另有 Pharmacy／Art／Business & Economics 学院款式）
+  - THE ONE ACADEMY、TARC 拉曼大学学院（Business Accounting／Science Information System & Engineering／Hospitality Hotel Management／Event Management 等学院款式）
+  - UTAR 拉曼大学、INTI International University & Colleges（各学院披肩颜色）
+  - Universiti Malaya 马来亚大学（13 个学院披肩颜色，从 Creative Arts 到 Medicine、Dentistry）
+- 页面下方保留一份完整学校 / 学院文字清单，方便浏览与搜索引擎收录。原本 9 格文字 / 局部 logo 的小格子已经拿掉，改成这批完整实拍照片。
+- 你重复传了一张「Sunway + Newcastle + MMU/SIM/UTM」的较小版本（只有部分学校、没有 Curtin/UoL/Murdoch/Raffles/NUS），内容已经完整包含在第一张大图里，所以这张没有另外放上去，避免重复；如果这张其实是要给我看不同的东西，请告诉我。
+- JSON-LD、内部连结、图片路径、sitemap.xml 已重新检查过一轮，没有问题。
+
+## 这次更新（第五轮）
+
+- **新增「作品集 Portfolio」独立页面**（portfolio.html）：从你新提供的 Family / Graduation / Headshot / Passport 四个资料夹（共 60+ 张真实客户照片）里，我逐张查看后挑选出 41 张放上网站，全部**按原始比例完整显示、完全没有裁切**，分成四个分类展示：
+  - 📸 护照 / 签证证件照（13 张）——刻意挑了涵盖婴儿、儿童、青少年、成人到银发族，以及不同肤色 / 国籍（含马来西亚护照、NZ 签证、德国护照）的照片，突显「各种年龄与签证类型我们都熟悉」这个卖点。
+  - 👔 专业形象照（12 张）——包含个人形象照、编辑风格写真，也放了 2 张公司团队合照（10 人、12 人），方便有团队拍摄需求的客户参考。
+  - 🎓 毕业照（8 张）——各种家庭组合、含毛孩入镜的毕业照。
+  - 👨‍👩‍👧 全家福（8 张）——四口之家、三代同堂、大家庭等不同组合。
+  - 首页也加了一个「看看我们拍过什么」预览区块（6 张精选照），点「查看完整作品集」会连到 portfolio.html。
+  - 全站 23 个页面的导航栏都加上「作品集」连结（FAQ 和 About 中间），sitemap.xml 也已更新。
+- **有一批照片我看过后没有放上网站，跟你说明一下原因**：Headshot 资料夹里有几张是泳装 / 健身比赛风格（比基尼 + 奖牌）、贴身内衣风格，以及几张袒胸/半裸的时尚编辑风格照片——这些拍得都很好，但考虑到 Premo Studio 网站同时也要给做护照照片、带小孩拍全家福的客户看，这类照片放在同一个作品集页面可能不太搭调，所以我先没有采用。如果你希望我加进去（例如另外做一个「时尚 / 编辑风格作品」分类，跟护照、全家福分开呈现），跟我说一声，我可以另外处理。
+- 有 2 张毕业照（`_PMO0085.jpg`、`DSC07063.jpg`）背景中会看到「TAYLOR'S UNIVERSITY」字样的红色证书筒，这是真实客户的真实物品，不是刻意置入，我保留原样没有做任何遮挡处理——如果你希望模糊处理或不使用这两张，告诉我即可。
+- JSON-LD、内部连结、图片路径、sitemap.xml 已重新检查过一轮，没有问题；Playwright 视觉检查也确认所有照片都完整显示、没有跑版或裁切。
