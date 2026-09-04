@@ -193,3 +193,23 @@
 - 5 篇毕业照指南文章（穿搭指南、价格指南、影棚 vs 户外、学校 vs 影棚、为什么毕业照重要）以及毕业袍页面，原本文末只连回 KL 页面，这次都加上了 JB 页面的连结，以及连回 FAQ 页面毕业照区块的连结，让整个「毕业照」主题的内部连结形成完整的网络。
 - 首页「我们的服务」区块的 4 个服务名称改成更完整的说法：Passport & Visa Photography、Professional Headshots、Graduation Photography、Family Portraits（原本是较简短的 Passport Photo、Headshot 等）。
 - JSON-LD、内部连结、图片路径、sitemap.xml 已重新检查过，没有问题；也用 Playwright 完整截图确认 KL 和 JB 两个页面在各个区块都正常显示。
+
+## 第十轮之后的复查（用户要求「再检查」）
+
+用户要求再检查一遍是否都按要求补上，复查后发现并修正了 3 个小问题：
+
+- `sitemap.xml` 里毕业照 KL/JB 两页原本 priority 还是 0.8（跟护照照片的 0.9 不一样），既然要求毕业照要跟护照照片一样强，已经改成 0.9。
+- 首页原本只有 Organization schema，没有独立的 `WebSite` schema（你的清单里有列到），已经补上（没有加 SearchAction，因为网站目前没有站内搜索功能，加了会是编造功能）。
+- 毕业照 KL/JB 两页的 FAQPage schema 跟页面上实际显示的 FAQ 数量对不上（schema 10 条，页面显示 9～11 条不等），已经逐条比对修正到完全一致（现在两页都是 11 条，schema 与页面显示的问题、答案文字完全对应）。
+
+复查时也发现了 5 个**跟这次毕业照任务无关、更早之前就存在**的类似 schema/页面数量不一致：`family-portrait-kl.html` / `family-portrait-jb.html`（schema 5 条，页面显示 4 条）、`headshot-kl.html` / `headshot-jb.html`（schema 5 条，页面显示 3 条）、`passport-photo-jb.html`（schema 5 条，页面显示 3 条）。
+
+## 一次过修正（用户要求）
+
+上面 5 个页面全部修好了，做法跟毕业照那两页一样：缺的问答不是删掉多的，而是把原本就写好、只是没有同步显示或没有同步写进 schema 的真实内容补齐，问题和答案文字完全沿用原本已经存在的版本，没有新增任何编造内容：
+
+- `family-portrait-kl.html` / `family-portrait-jb.html`：页面上原本少了「多久可以拿到照片？」「可以两个家庭一起团拍吗？」这两条（schema 里本来就有，用同样的答案补到页面上）；schema 里则少了页面上原本就有的「什么时候拍全家福比较适合？需要提前多久预约？」，也补进 schema。两页现在都是 6 条问答，schema 与页面完全对应。
+- `headshot-kl.html` / `headshot-jb.html`：页面上补了「适合 LinkedIn 用的形象照要注意什么？」「拍摄需要多久？可以拍几套服装？」这两条（schema 里本来就有）。两页现在都是 5 条问答，schema 与页面完全对应。
+- `passport-photo-jb.html`：页面上补了「新山证件照收费多少？」（RM49 订金，跟 KL 页面一致的真实定价）「可以现场排队拍摄吗，还是一定要先预约？」这两条（schema 里本来就有）。现在是 5 条问答，schema 与页面完全对应。
+
+修完后对全站 19 个有 FAQPage schema 的页面重新扫描了一遍，确认全部页面的 schema 问答数量与页面上实际显示的完全一致，没有遗漏。也用 Playwright 截图确认三个页面的 FAQ 区块显示正常。
