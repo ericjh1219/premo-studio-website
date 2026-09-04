@@ -188,6 +188,9 @@ section { padding: 80px 40px; }
 /* Footer */
 footer { padding: 56px 40px; text-align: center; }
 footer .foot-note { margin-top: 18px; color: #8A9694; font-size: 13px; }
+footer .foot-social { margin-top: 8px; color: #8A9694; font-size: 12.5px; }
+footer .foot-social a { color: #8A9694; text-decoration: underline; text-underline-offset: 2px; }
+footer .foot-social a:hover { color: #333; }
 
 /* Portfolio masonry — no-crop gallery, images keep natural aspect ratio */
 .portfolio-masonry { columns: 3 280px; column-gap: 18px; margin-bottom: 8px; }
