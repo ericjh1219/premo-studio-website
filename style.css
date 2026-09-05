@@ -66,6 +66,7 @@ img { max-width: 100%; display: block; }
   background: var(--accent); color: #fff; padding: 9px 18px; border-radius: 2px;
   font-size: 13.5px; font-weight: 600; white-space: nowrap;
 }
+.nav-toggle-checkbox { display: none; }
 .nav-toggle { display: none; }
 
 /* Nav service dropdowns (KL / JB per service) */
@@ -197,15 +198,64 @@ footer .foot-social a:hover { color: #333; }
 .portfolio-item { break-inside: avoid; margin-bottom: 18px; border-radius: 10px; overflow: hidden; border: 1px solid var(--card-border); background: #fff; }
 .portfolio-item img { width: 100%; height: auto; display: block; }
 
+/* Mobile-only compact fallback text under wide illustration images
+   (hidden on desktop where the image's baked-in text is legible) */
+.mobile-only-caption { display: none; }
+
 /* Responsive */
 @media (max-width: 900px) {
   .hero-inner { display: block !important; }
   .grid-4, .grid-3, .grid-2 { grid-template-columns: 1fr; }
   .hero h1 { font-size: 32px; }
-  .site-nav { padding: 14px 20px; }
-  .nav-links > a:not(.nav-cta), .nav-links > span, .nav-links > .nav-dropdown { display: none; }
+  .site-nav { padding: 14px 20px; position: relative; }
   .nav-links { gap: 0; }
   .portfolio-masonry { columns: 2 180px; column-gap: 12px; }
   .portfolio-item { margin-bottom: 12px; }
   section, .hero { padding-left: 20px; padding-right: 20px; }
+
+  /* Hamburger menu (pure CSS, no JS) */
+  .nav-toggle {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 34px; height: 34px; font-size: 22px; line-height: 1;
+    color: var(--text-dark); cursor: pointer; border-radius: 4px; flex-shrink: 0;
+    order: 3;
+  }
+  .nav-toggle:hover { background: var(--bg-section-alt); }
+  .nav-cta { order: 2; margin-right: 8px; }
+
+  /* Collapsed by default: hide everything except the WhatsApp CTA */
+  .nav-links > a:not(.nav-cta), .nav-links > span, .nav-links > .nav-dropdown { display: none; }
+
+  /* Expanded panel when the checkbox is checked */
+  .nav-toggle-checkbox:checked ~ .nav-links {
+    position: absolute; top: 100%; left: 0; right: 0;
+    background: #fff; border-bottom: 1px solid #ECE7DC;
+    box-shadow: 0 12px 24px rgba(30,30,25,0.1);
+    flex-direction: column; align-items: stretch; gap: 0;
+    padding: 8px 20px 18px; z-index: 55;
+  }
+  .nav-toggle-checkbox:checked ~ .nav-links > a:not(.nav-cta),
+  .nav-toggle-checkbox:checked ~ .nav-links > span,
+  .nav-toggle-checkbox:checked ~ .nav-links > .nav-dropdown {
+    display: block; width: 100%;
+  }
+  .nav-toggle-checkbox:checked ~ .nav-links > a:not(.nav-cta),
+  .nav-toggle-checkbox:checked ~ .nav-links > span {
+    padding: 12px 0; border-bottom: 1px solid var(--card-border);
+  }
+  .nav-toggle-checkbox:checked ~ .nav-links > .nav-cta {
+    order: 0; margin: 14px 0 0; text-align: center;
+  }
+
+  /* Service dropdowns become static, always-expanded sublists inside the mobile panel */
+  .nav-toggle-checkbox:checked ~ .nav-links .nav-dropdown { padding: 12px 0; border-bottom: 1px solid var(--card-border); }
+  .nav-toggle-checkbox:checked ~ .nav-links .nav-dropdown-toggle { pointer-events: none; }
+  .nav-toggle-checkbox:checked ~ .nav-links .nav-dropdown-menu {
+    position: static; transform: none; opacity: 1; visibility: visible;
+    box-shadow: none; border: none; padding: 8px 0 0 12px; margin-top: 6px;
+    min-width: 0;
+  }
+  .nav-toggle-checkbox:checked ~ .nav-links .nav-dropdown-menu a { padding: 8px 0; }
+
+  .mobile-only-caption { display: block; }
 }
