@@ -207,6 +207,32 @@ footer .foot-social a:hover { color: #333; }
   .hero-inner { display: block !important; }
   .grid-4, .grid-3, .grid-2 { grid-template-columns: 1fr; }
   .hero h1 { font-size: 32px; }
+
+  /* Hero photo pairs (family portrait / graduation hero images) —
+     stack full-width instead of squeezing two side-by-side at ~50% each */
+  .hero-photo-pair {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 18px !important;
+    margin-top: 24px;
+  }
+  .hero-photo-item {
+    width: 100% !important;
+    margin-top: 0 !important;
+  }
+  .hero-photo-item img {
+    max-height: none !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+  /* Same treatment for pages where the two hero photos are bare <img> tags
+     directly inside .hero-photo-pair (no wrapping .hero-photo-item div) */
+  .hero-photo-pair > img {
+    max-width: 100% !important;
+    max-height: none !important;
+    width: 100% !important;
+    height: auto !important;
+  }
   .site-nav { padding: 14px 20px; position: relative; }
   .nav-links { gap: 0; }
   .portfolio-masonry { columns: 2 180px; column-gap: 12px; }
