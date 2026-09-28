@@ -1,0 +1,28 @@
+old_url,new_url,status_code,priority,notes
+https://www.premostudio.my/,https://www.premostudio.my/,200,critical,"Homepage stays at root; no redirect needed once index.html is live at that domain"
+https://www.premostudio.my/kl-graduation-photo,https://www.premostudio.my/graduation-photo-kl.html,301,critical,"~108 clicks / ~3066 impressions in GSC"
+https://www.premostudio.my/kl-passport-photo,https://www.premostudio.my/passport-photo-kl.html,301,critical,"~104 clicks / ~13044 impressions in GSC"
+https://www.premostudio.my/passport-photo-kl,https://www.premostudio.my/passport-photo-kl.html,301,high,"Alternate slug, same destination as /kl-passport-photo"
+https://www.premostudio.my/headshot,https://www.premostudio.my/headshot-kl.html,301,high,
+https://www.premostudio.my/graduation-photo,https://www.premostudio.my/graduation-photo-kl.html,301,high,"Same destination as /kl-graduation-photo"
+https://www.premostudio.my/book-online,https://premostudio.minibookit.com/,301,medium,"External booking system; no internal booking page on new site"
+https://www.premostudio.my/about-1,https://www.premostudio.my/about.html,301,medium,
+https://www.premostudio.my/集团介绍,https://www.premostudio.my/about.html,301,medium,
+https://www.premostudio.my/门店信息,https://www.premostudio.my/about.html,301,medium,
+https://www.premostudio.my/门店讯息-store-info,https://www.premostudio.my/about.html,301,medium,"Duplicate of /门店信息"
+https://www.premostudio.my/portfolio,https://www.premostudio.my/portfolio.html,301,medium,
+https://www.premostudio.my/qna-1,https://www.premostudio.my/faq.html,301,medium,
+https://www.premostudio.my/headshot-cost-kl,https://www.premostudio.my/headshot-cost-kl.html,301,medium,
+https://www.premostudio.my/copy-of-new-page,https://www.premostudio.my/headshot-cost-kl.html,301,low,"Wix dev-duplicate"
+https://www.premostudio.my/headshot-preparation-guide,https://www.premostudio.my/headshot-preparation-guide.html,301,medium,
+https://www.premostudio.my/who-needs-a-headshot,https://www.premostudio.my/who-needs-a-headshot.html,301,medium,
+https://www.premostudio.my/men-makeup-headshot,https://www.premostudio.my/men-makeup-headshot.html,301,medium,
+https://www.premostudio.my/rm49-vs-rm299-headshot,https://www.premostudio.my/rm49-vs-rm299-headshot.html,301,medium,"Legacy slug kept; article content is the real RM99 vs RM299 comparison"
+https://www.premostudio.my/how-much-does-a-graduation-photo-cost-in,https://www.premostudio.my/how-much-does-a-graduation-photo-cost-in.html,301,medium,
+https://www.premostudio.my/what-to-wear-graduation-photo,https://www.premostudio.my/what-to-wear-graduation-photo.html,301,medium,
+https://www.premostudio.my/studio-vs-school-graduation-photo,https://www.premostudio.my/studio-vs-school-graduation-photo.html,301,medium,
+https://www.premostudio.my/studio-vs-outdoor,https://www.premostudio.my/studio-vs-outdoor.html,301,medium,
+https://www.premostudio.my/why-graduation-photos-are-more-important,https://www.premostudio.my/why-graduation-photos-are-more-important.html,301,medium,
+https://www.premostudio.my/典型商务照,https://www.premostudio.my/headshot-kl.html,301,medium,
+https://www.premostudio.my/copy-of-典型商务照,https://www.premostudio.my/headshot-kl.html,301,low,"Wix dev-duplicate"
+https://www.premostudio.my/copy-of-passport-photo,https://www.premostudio.my/passport-photo-kl.html,301,low,"Wix dev-duplicate"
