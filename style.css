@@ -136,6 +136,20 @@ section { padding: 80px 40px; }
 .grid-4 { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 26px; }
 .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 24px; }
 .grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 48px; }
+
+/* Article layout — main content + sidebar, used on guide/blog article pages */
+.article-layout { display: grid; grid-template-columns: 2fr 1fr; gap: 48px; align-items: start; }
+.article-sidebar { display: flex; flex-direction: column; gap: 20px; position: sticky; top: 88px; }
+.sidebar-card { background: #fff; border: 1px solid var(--card-border); border-radius: 6px; padding: 22px; }
+.sidebar-card h3 { font-size: 13px; font-weight: 700; letter-spacing: 0.08em; color: var(--text-dark); margin-bottom: 14px; text-transform: uppercase; }
+.sidebar-toc { display: flex; flex-direction: column; gap: 10px; font-size: 14px; }
+.sidebar-toc a { color: var(--text-muted); line-height: 1.5; }
+.sidebar-toc a:hover { color: var(--accent); }
+.sidebar-related { display: flex; flex-direction: column; gap: 12px; font-size: 14px; }
+.sidebar-related a { color: var(--text-dark); font-weight: 500; line-height: 1.5; }
+.sidebar-related a:hover { color: var(--accent); }
+.sidebar-faq-q { font-size: 13.5px; color: var(--text-muted); line-height: 1.6; padding: 8px 0; border-top: 1px solid var(--card-border); }
+.sidebar-faq-q:first-child { border-top: none; padding-top: 0; }
 .card { background: #fff; border: 1px solid var(--card-border); padding: 26px 22px; }
 .card svg { margin-bottom: 14px; }
 .card-title { font-weight: 600; font-size: 15.5px; margin-bottom: 8px; }
@@ -205,7 +219,8 @@ footer .foot-social a:hover { color: #333; }
 /* Responsive */
 @media (max-width: 900px) {
   .hero-inner { display: block !important; }
-  .grid-4, .grid-3, .grid-2 { grid-template-columns: 1fr; }
+  .grid-4, .grid-3, .grid-2, .article-layout { grid-template-columns: 1fr; }
+  .article-sidebar { position: static; }
   .hero h1 { font-size: 32px; }
 
   /* Hero photo pairs (family portrait / graduation hero images) —
