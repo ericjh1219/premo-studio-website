@@ -11,7 +11,7 @@ Search Console data referenced (Jul–Oct 2026): "passport photo near me" about 
 3. **Primary category.** Choose the category that matches your main money service for that branch (for KL, check whether "Passport photo studio" or "Photo studio" fits best); add "Portrait studio" and "Graduation photographer"-type secondary categories where Google offers them.
 4. **Address, phone and website must match the website exactly.**
    - KL: No 382A, Jalan Seragam, Taman United Garden, 58200 Kuala Lumpur — +6018 793 1888
-   - Website link: `https://www.premostudio.my/passport-photo-kl.html` (KL) and `https://www.premostudio.my/passport-photo-jb.html` (JB) rather than the homepage, so "passport photo" searchers land on the matching page.
+   - Website link: `https://premostudio.my/passport-photo-kl.html` (KL) and `https://premostudio.my/passport-photo-jb.html` (JB) rather than the homepage, so "passport photo" searchers land on the matching page.
 5. **Opening hours.** KL: 10:00 AM – 7:00 PM, closed Thursdays (same as the website). Mark holiday hours when they change.
 6. **Services list.** Add Passport photo (from RM49), Visa photo, Business headshot, Graduation photography, Family portrait, with the same limited-time prices shown on the website.
 7. **Photos.** Upload real photos of the studio front, signage, inside, the shooting area, and sample results. Add new photos regularly.

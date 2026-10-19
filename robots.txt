@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.premostudio.my/sitemap.xml
+Sitemap: https://premostudio.my/sitemap.xml

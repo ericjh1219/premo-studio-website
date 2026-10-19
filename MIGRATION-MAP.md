@@ -2,9 +2,9 @@
 
 **Status:** Preparation only. Nothing in this document has been published to `premostudio.my` or `ericjh1219.github.io`. The Wix site remains live and unchanged. DNS has not been touched.
 
-**Old site:** `https://www.premostudio.my/` (Wix)
+**Old site:** `https://premostudio.my/` (Wix)
 **New site (staging):** `https://ericjh1219.github.io/premo-studio-website/`
-**Future canonical domain:** `https://www.premostudio.my/` (new GitHub Pages site, once cut over)
+**Future canonical domain:** `https://premostudio.my/` (new GitHub Pages site, once cut over)
 
 This is the source of truth for every old Wix URL that needs a destination on the new site. See `REDIRECTS.md` for how these mappings actually get implemented as redirects (GitHub Pages cannot do this on its own — read that file before acting on this one).
 

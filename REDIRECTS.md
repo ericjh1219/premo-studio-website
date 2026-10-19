@@ -9,9 +9,9 @@
 - **`404.html`** (noindex) so a mistyped or removed URL shows a useful page instead of a blank error.
 - **`migration-prep/redirects.csv`** (39 mappings, documentation) and **`migration-prep/cloudflare-bulk-redirects.csv`** (the same mappings for both `www.` and non-`www` hosts, 78 lines, ready to adapt to Cloudflare Bulk Redirects — check Cloudflare's current import format before uploading).
 
-### One decision only you can make: www vs non-www
+### Canonical host: premostudio.my (no www)
 
-Google Search Console shows both `premostudio.my` and `www.premostudio.my` being indexed as separate sites, which splits homepage clicks. Every canonical tag in this repo points to `https://www.premostudio.my/`. In GitHub → Settings → Pages, set the custom domain to `www.premostudio.my`; GitHub then redirects the non-`www` address to `www` (this needs your DNS records to be set up for both, which this project does not touch).
+Google Search Console showed both hosts indexed, and the URL Inspection tool showed Google already treats `https://premostudio.my/...` as the canonical version while `www.premostudio.my/...` is reported as "Page with redirect" (GitHub Pages is serving the non-`www` address as primary). Every canonical tag, `og:url`, sitemap entry, `robots.txt` Sitemap line and JSON-LD URL in this repo therefore uses `https://premostudio.my/`. Leave GitHub → Settings → Pages → Custom domain set to `premostudio.my` so this stays consistent.
 
 ## 1. The core limitation — read this first
 
