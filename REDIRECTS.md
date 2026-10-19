@@ -1,6 +1,17 @@
 # Redirect Strategy — Wix → GitHub Pages
 
-**Status:** Documentation and inert preparation files only. Nothing here is live. DNS has not been changed, the Wix site has not been touched, and nothing has been published to `premostudio.my`.
+**Status (updated Oct 2026):** The fallback stub pages (Option B below) are now **in the site root** so previously indexed old URLs do not 404 once this version is uploaded. They are meta-refresh + canonical pages that return HTTP 200 — they are **not** true 301 redirects. Option A (Cloudflare) is still the only way to get real 301s and is still recommended. DNS, Cloudflare and domain settings have not been changed by this project.
+
+### What is in the repo now
+
+- **26 Wix-path stubs**, e.g. `kl-passport-photo/index.html` → `passport-photo-kl.html`, `kl-graduation-photo/index.html` → `graduation-photo-kl.html`, `book-online/index.html` → the external booking system.
+- **13 old-filename stubs** for files that existed in the previous GitHub upload and were renamed or merged, e.g. `graduation-photo-cost-guide.html` → `how-much-does-a-graduation-photo-cost-in.html` (this old URL already has clicks in Google Search Console).
+- **`404.html`** (noindex) so a mistyped or removed URL shows a useful page instead of a blank error.
+- **`migration-prep/redirects.csv`** (39 mappings, documentation) and **`migration-prep/cloudflare-bulk-redirects.csv`** (the same mappings for both `www.` and non-`www` hosts, 78 lines, ready to adapt to Cloudflare Bulk Redirects — check Cloudflare's current import format before uploading).
+
+### One decision only you can make: www vs non-www
+
+Google Search Console shows both `premostudio.my` and `www.premostudio.my` being indexed as separate sites, which splits homepage clicks. Every canonical tag in this repo points to `https://www.premostudio.my/`. In GitHub → Settings → Pages, set the custom domain to `www.premostudio.my`; GitHub then redirects the non-`www` address to `www` (this needs your DNS records to be set up for both, which this project does not touch).
 
 ## 1. The core limitation — read this first
 
@@ -51,7 +62,7 @@ migration-prep/redirect-stubs/kl-passport-photo/index.html     → redirects to 
 migration-prep/redirect-stubs/book-online/index.html           → redirects to https://premostudio.minibookit.com/
 ```
 
-**These are inert right now.** They live under `migration-prep/` specifically so they are not part of the deployed site and don't change anything about the current GitHub Pages output. Nothing links to them, and they are not in `sitemap.xml`. If and when you decide to use this fallback, the folders under `migration-prep/redirect-stubs/` would be moved to the repository root (so `kl-graduation-photo/index.html` sits at the root, not inside `migration-prep/`) before that deploy — that's a deliberate, reviewable step for you or your developer to take, not something this task does automatically.
+**These stubs are now copied to the repository root** (the originals are still kept under `migration-prep/redirect-stubs/` for reference). Nothing links to them and they are not in `sitemap.xml`. Once Cloudflare 301s are live for a path, that path's stub becomes redundant and can stay or be removed.
 
 ## 4. What I'd actually recommend
 
@@ -65,4 +76,4 @@ Use Option A when you're ready to cut over. Keep Option B's stub files in reserv
 4. Only then: point DNS at GitHub Pages / Cloudflare, verify the redirects fire correctly, and monitor Google Search Console for crawl errors.
 5. Only decommission the Wix site after the above is confirmed working and Search Console shows the new URLs being indexed cleanly.
 
-None of step 2 onward is done — this task only prepared the documentation and the inert stub files described above.
+None of step 2 onward has been done: Cloudflare, DNS and domain settings are changed by you, not by this project. What this project prepared is the documentation, the redirect lists and the stub pages described above.
